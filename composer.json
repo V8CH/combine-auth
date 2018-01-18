@@ -5,6 +5,13 @@
     }
   },
   "description": "The Combine Auth package",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "V8CH\\Combine\\Auth\\Providers\\AuthServiceProvider"
+      ]
+    }
+  },
   "name": "v8ch/combine-auth",
   "require": {
     "illuminate/support": "^5.5",
