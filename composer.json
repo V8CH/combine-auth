@@ -7,8 +7,10 @@
   "description": "The Combine Auth package",
   "name": "v8ch/combine-auth",
   "require": {
-    "php": ">=7.0.0",
-    "v8ch/combine-core": "0.0.1"
+    "illuminate/support": "^5.5",
+    "laravel/passport": "^4.0",
+    "php": "^7.0",
+    "spatie/laravel-fractal": "^5.3"
   },
   "version": "0.1"
 }
