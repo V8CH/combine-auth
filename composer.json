@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "V8CH\\Combine\\Auth\\": "src"
+    }
+  },
+  "description": "The Combine Auth package",
+  "name": "v8ch/combine-auth",
+  "require": {
+    "php": ">=7.0.0",
+    "v8ch/combine-core": "0.0.1"
+  },
+  "version": "0.1"
+}
