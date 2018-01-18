@@ -1,0 +1,23 @@
+{
+  "autoload": {
+    "psr-4": {
+      "V8CH\\Combine\\Auth\\": "src"
+    }
+  },
+  "description": "The Combine Auth package",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "V8CH\\Combine\\Auth\\Providers\\AuthServiceProvider"
+      ]
+    }
+  },
+  "name": "v8ch/combine-auth",
+  "require": {
+    "illuminate/support": "^5.5",
+    "laravel/passport": "^4.0",
+    "php": "^7.0",
+    "spatie/laravel-fractal": "^5.3"
+  },
+  "version": "0.1"
+}
