@@ -30,13 +30,13 @@ Route::middleware('web')
         });
 
         Route::post('logout', 'LoginController@logout');
-        Route::post('signin', 'LoginController@signin');
+        Route::post('login', 'LoginController@login');
 
         // --------------------------------
         // Default Granary routes
         // --------------------------------
 
-        Route::get('signin', function () {
+        Route::get('login', function () {
             return view('combine::granary-auth');
         });
 
