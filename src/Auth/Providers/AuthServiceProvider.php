@@ -6,15 +6,14 @@
 
 namespace V8CH\Combine\Auth\Providers;
 
+use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use V8CH\Combine\Core\Providers\RegistersEloquentFactories;
-use V8CH\Combine\Core\Providers\RegistersPolicies;
+
 
 class AuthServiceProvider extends ServiceProvider
 {
-
-    use RegistersEloquentFactories, RegistersPolicies;
 
     /**
      * The policy mappings for the application.
@@ -70,5 +69,29 @@ class AuthServiceProvider extends ServiceProvider
                 'serverErrors' => json_encode($errors),
                 ]);
         });
+    }
+
+    /**
+     * Register factories.
+     *
+     * @param  string $path
+     * @return void
+     */
+    protected function registerEloquentFactoriesFrom($path)
+    {
+        /** @noinspection PhpUndefinedFieldInspection */
+        $this->app->make(EloquentFactory::class)->load($path);
+    }
+
+    /**
+     * Register policies.
+     *
+     * @return void
+     */
+    public function registerPolicies()
+    {
+        foreach ($this->policies as $key => $value) {
+            Gate::policy($key, $value);
+        }
     }
 }
