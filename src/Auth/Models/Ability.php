@@ -7,8 +7,7 @@ namespace V8CH\Combine\Auth\Models;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
-use V8CH\Combine\Core\Models\CreatesUuids;
-use V8CH\Combine\Member\Models\Member;
+use V8CH\EloquentModelTraits\CreatesUuids;
 
 class Ability extends Model
 {
@@ -63,21 +62,21 @@ class Ability extends Model
      * @return array
      * @throws Exception
      */
-    public function getConditionsAttribute($value)
-    {
-        if ($this->subject === null) {
-            return null;
-        }
-        $user = request()->user();
-        switch ($this->subject) {
-            case Member::class:
-                return collect(json_decode($value))->reduce(function($accumulator, $key) use ($user) {
-                    $accumulator[$key] = $user->selected_context->{$key};
-                    return $accumulator;
-                }, []);
-            default:
-                throw new Exception('Invalid subject.');
-        }
-    }
+//    public function getConditionsAttribute($value)
+//    {
+//        if ($this->subject === null) {
+//            return null;
+//        }
+//        $user = request()->user();
+//        switch ($this->subject) {
+//            case Member::class:
+//                return collect(json_decode($value))->reduce(function($accumulator, $key) use ($user) {
+//                    $accumulator[$key] = $user->selected_context->{$key};
+//                    return $accumulator;
+//                }, []);
+//            default:
+//                throw new Exception('Invalid subject.');
+//        }
+//    }
 
 }
