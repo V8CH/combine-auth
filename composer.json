@@ -19,5 +19,5 @@
     "php": "^7.0",
     "spatie/laravel-fractal": "^5.3"
   },
-  "version": "0.1"
+  "version": "0.1.0"
 }

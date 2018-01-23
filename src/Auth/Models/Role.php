@@ -7,7 +7,7 @@
 namespace V8CH\Combine\Auth\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use V8CH\Combine\Core\Models\CreatesUuids;
+use V8CH\EloquentModelTraits\CreatesUuids;
 
 class Role extends Model
 {

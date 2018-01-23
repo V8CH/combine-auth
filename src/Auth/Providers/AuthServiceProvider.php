@@ -6,15 +6,14 @@
 
 namespace V8CH\Combine\Auth\Providers;
 
+use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use V8CH\Combine\Core\Providers\RegistersEloquentFactories;
-use V8CH\Combine\Core\Providers\RegistersPolicies;
+
 
 class AuthServiceProvider extends ServiceProvider
 {
-
-    use RegistersEloquentFactories, RegistersPolicies;
 
     /**
      * The policy mappings for the application.
@@ -29,7 +28,6 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . '/../../../migrations');
-        $this->loadRoutesFrom(__DIR__ . '/../../../routes/api.php');
         $this->loadRoutesFrom(__DIR__ . '/../../../routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../../../views', 'combine');
         $this->publishes([__DIR__ . '/../../../config/combine-auth.php' => config_path('combine-auth.php')]);
@@ -50,7 +48,7 @@ class AuthServiceProvider extends ServiceProvider
         // Factories
         $this->registerEloquentFactoriesFrom(__DIR__ . '/../../../factories');
         // View Composers
-        View::composer('combine::granary-auth', function($view) {
+        View::composer('combine::laravel-auth-spa', function($view) {
             $errors = null;
             if (!is_null(session('errors'))) {
                 foreach(session('errors')->getMessages() as $key => $message) {
@@ -70,5 +68,29 @@ class AuthServiceProvider extends ServiceProvider
                 'serverErrors' => json_encode($errors),
                 ]);
         });
+    }
+
+    /**
+     * Register factories.
+     *
+     * @param  string $path
+     * @return void
+     */
+    protected function registerEloquentFactoriesFrom($path)
+    {
+        /** @noinspection PhpUndefinedFieldInspection */
+        $this->app->make(EloquentFactory::class)->load($path);
+    }
+
+    /**
+     * Register policies.
+     *
+     * @return void
+     */
+    public function registerPolicies()
+    {
+        foreach ($this->policies as $key => $value) {
+            Gate::policy($key, $value);
+        }
     }
 }
