@@ -25,7 +25,7 @@
 
     <!-- Site style -->
     <!--suppress HtmlUnknownTarget -->
-    <link href="{{ asset('css/granary-auth.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/laravel-auth-spa-style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -92,8 +92,8 @@
 <!--suppress JSUnresolvedLibraryURL -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script src="{{ asset('js/manifest.js') }}"></script>
-<script src="{{ asset('js/granary-vendor-react.js') }}"></script>
-<script src="{{ asset('js/granary-auth.js') }}"></script>
+<script src="{{ asset('js/laravel-auth-spa-vendor.js') }}"></script>
+<script src="{{ asset('js/laravel-auth-spa.js') }}"></script>
 
 </body>
 

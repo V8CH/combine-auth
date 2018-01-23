@@ -26,7 +26,7 @@ Route::middleware('web')
         // --------------------------------
 
         Route::get('forgot', function () {
-            return view('combine::granary-auth');
+            return view('combine::laravel-auth-spa');
         });
 
         Route::post('logout', 'LoginController@logout');
@@ -37,10 +37,10 @@ Route::middleware('web')
         // --------------------------------
 
         Route::get('login', function () {
-            return view('combine::granary-auth');
+            return view('combine::laravel-auth-spa');
         });
 
         Route::get('signup', function () {
-            return view('combine::granary-auth');
+            return view('combine::laravel-auth-spa');
         });
     });

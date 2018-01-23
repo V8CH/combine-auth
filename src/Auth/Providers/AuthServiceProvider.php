@@ -48,7 +48,7 @@ class AuthServiceProvider extends ServiceProvider
         // Factories
         $this->registerEloquentFactoriesFrom(__DIR__ . '/../../../factories');
         // View Composers
-        View::composer('combine::granary-auth', function($view) {
+        View::composer('combine::laravel-auth-spa', function($view) {
             $errors = null;
             if (!is_null(session('errors'))) {
                 foreach(session('errors')->getMessages() as $key => $message) {
