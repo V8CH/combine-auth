@@ -25,7 +25,7 @@
 
     <!-- Site style -->
     <!--suppress HtmlUnknownTarget -->
-    <link href="{{ asset('css/granary-auth-bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/granary-auth.css') }}" rel="stylesheet">
 
 </head>
 
