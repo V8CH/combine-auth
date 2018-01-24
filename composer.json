@@ -4,7 +4,7 @@
       "V8CH\\Combine\\Auth\\": "src"
     }
   },
-  "description": "The Combine Auth package",
+  "description": "API implemention of Laravel's built-in authentication architecture",
   "extra": {
     "laravel": {
       "providers": [
@@ -12,12 +12,12 @@
       ]
     }
   },
-  "name": "v8ch/combine-auth",
+  "name": "v8ch/laravel-auth-api",
   "require": {
     "illuminate/support": "^5.5",
     "laravel/passport": "^4.0",
     "php": "^7.0",
     "spatie/laravel-fractal": "^5.3"
   },
-  "version": "0.1.0"
+  "version": "0.0.1"
 }
