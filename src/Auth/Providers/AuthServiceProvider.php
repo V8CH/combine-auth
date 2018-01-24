@@ -30,7 +30,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../../../migrations');
         $this->loadRoutesFrom(__DIR__ . '/../../../routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../../../views', 'combine');
-        $this->publishes([__DIR__ . '/../../../config/combine-auth.php' => config_path('combine-auth.php')]);
         $this->registerPolicies();
     }
 
@@ -39,12 +38,6 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Configs
-        $this->mergeConfigFrom(__DIR__ . '/../../../config/combine-auth.php', 'combine-auth');
-        config(['auth.guards.api.driver' => config('combine-auth.auth.guards.api.driver')]);
-        config(['auth.guards.api.provider' => config('combine-auth.auth.guards.api.provider')]);
-        $authProvidersUsersModel = config('combine-auth.auth.providers.users.model');
-        config(['auth.providers.users.model' => $authProvidersUsersModel]);
         // Factories
         $this->registerEloquentFactoriesFrom(__DIR__ . '/../../../factories');
         // View Composers

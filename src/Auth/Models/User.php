@@ -18,28 +18,13 @@ class User extends Authenticatable
     use CreatesUuids, HasApiTokens, Notifiable, SoftDeletes;
 
     /**
-     * Model defaults.
-     *
-     * @var array
-     */
-    protected $attributes = [
-        'role' => 'User',
-        'status' => 'Invited',
-    ];
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['settings'];
-
-    /**
-     * Indicates if the IDs are auto-incrementing.
-     *
-     * @var bool
-     */
-    public $incrementing = false;
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -47,6 +32,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
+        'password', 'remember_token',
     ];
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
 }
