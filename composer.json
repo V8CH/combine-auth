@@ -17,7 +17,8 @@
     "illuminate/support": "^5.5",
     "laravel/passport": "^4.0",
     "php": "^7.0",
-    "spatie/laravel-fractal": "^5.3"
+    "spatie/laravel-fractal": "^5.3",
+    "v8ch/eloquent-model-traits": "^0.1.0"
   },
   "version": "0.0.1"
 }
