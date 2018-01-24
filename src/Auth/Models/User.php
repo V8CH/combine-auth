@@ -12,9 +12,6 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use V8CH\EloquentModelTraits\CreatesUuids;
 
-/** @noinspection PhpInconsistentReturnPointsInspection */
-
-/** @noinspection PhpInconsistentReturnPointsInspection */
 class User extends Authenticatable
 {
 
