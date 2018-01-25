@@ -4,7 +4,7 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Providers;
+namespace V8CH\LaravelAuthApi\Providers;
 
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Illuminate\Support\Facades\Gate;
