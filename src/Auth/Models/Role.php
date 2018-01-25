@@ -4,7 +4,7 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Models;
+namespace V8CH\LaravelAuthApi\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use V8CH\EloquentModelTraits\CreatesUuids;

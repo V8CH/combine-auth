@@ -5,7 +5,7 @@
  */
 
 use Faker\Generator as Faker;
-use V8CH\Combine\Auth\Models\User;
+use V8CH\LaravelAuthApi\Models\User;
 
 /** @noinspection PhpUndefinedVariableInspection */
 $factory->define(User::class, function (Faker $faker) {

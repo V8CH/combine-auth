@@ -4,15 +4,15 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Database;
+namespace V8CH\LaravelAuthApi\Database;
 
 use DB;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
 use V8CH\Combine\Member\Models\Member;
-use V8CH\Combine\Auth\Models\User;
+use V8CH\LaravelAuthApi\Models\User;
 
-class CombineAuthSeeder extends Seeder
+class LaravelAuthApiSeeder extends Seeder
 {
 
     use PopulatesAbilities, PopulatesRoles;

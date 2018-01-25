@@ -5,7 +5,7 @@
  */
 
 use Faker\Generator as Faker;
-use V8CH\Combine\Auth\Models\Role;
+use V8CH\LaravelAuthApi\Models\Role;
 use V8CH\Combine\Member\Models\Member;
 
 /** @noinspection PhpUndefinedVariableInspection */
