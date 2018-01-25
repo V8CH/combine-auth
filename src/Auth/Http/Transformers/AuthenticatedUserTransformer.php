@@ -6,7 +6,7 @@
 
 namespace V8CH\Combine\Auth\Http\Transformers;
 
-use V8CH\Combine\Auth\Models\User;
+use V8CH\Combine\Core\Models\User;
 use League\Fractal\TransformerAbstract;
 
 class AuthenticatedUserTransformer extends TransformerAbstract
