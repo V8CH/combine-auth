@@ -1,14 +1,14 @@
 {
   "autoload": {
     "psr-4": {
-      "V8CH\\Combine\\Auth\\": "src"
+      "V8CH\\LaravelAuthApi\\": "src"
     }
   },
   "description": "API implemention of Laravel's built-in authentication architecture",
   "extra": {
     "laravel": {
       "providers": [
-        "V8CH\\Combine\\Auth\\Providers\\AuthServiceProvider"
+        "V8CH\\LaravelAuthApi\\Providers\\AuthServiceProvider"
       ]
     }
   },
