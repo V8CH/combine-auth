@@ -12,6 +12,7 @@
       ]
     }
   },
+  "license": "GPL-3.0-or-later",
   "name": "v8ch/laravel-auth-api",
   "require": {
     "illuminate/support": "^5.5",
