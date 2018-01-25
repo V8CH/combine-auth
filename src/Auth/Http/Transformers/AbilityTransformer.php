@@ -4,10 +4,10 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Http\Transformers;
+namespace V8CH\LaravelAuthApi\Http\Transformers;
 
 use League\Fractal\TransformerAbstract;
-use V8CH\Combine\Auth\Models\Ability;
+use V8CH\LaravelAuthApi\Models\Ability;
 
 class AbilityTransformer extends TransformerAbstract
 {

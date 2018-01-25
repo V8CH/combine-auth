@@ -5,8 +5,8 @@
  */
 
 use Faker\Generator as Faker;
-use V8CH\Combine\Auth\Models\Ability;
-use V8CH\Combine\Auth\Models\Role;
+use V8CH\LaravelAuthApi\Models\Ability;
+use V8CH\LaravelAuthApi\Models\Role;
 
 /** @noinspection PhpUndefinedVariableInspection */
 $factory->define(Ability::class, function (Faker $faker) {
