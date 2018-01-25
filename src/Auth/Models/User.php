@@ -4,7 +4,7 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Models;
+namespace V8CH\LaravelAuthApi\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,6 +16,16 @@ class User extends Authenticatable
 {
 
     use CreatesUuids, HasApiTokens, Notifiable, SoftDeletes;
+
+    /**
+     * Model defaults.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'role' => 'User',
+        'status' => 'Onboarded',
+    ];
 
     /**
      * The attributes that are mass assignable.
