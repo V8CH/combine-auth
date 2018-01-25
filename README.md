@@ -1,8 +1,17 @@
-# combine-auth
+# Laravel Auth API
+
+An API implemention of Laravel's built-in authentication architecture.
+
 
 ## Installation
 
-Requires an update to the application `auth` config key in `config\auth.php`.
+Via Composer:
+
+```php
+composer require v8ch/combine-shared
+```
+
+Then, update the parent application's `auth` config key in `config\auth.php`.
 
 ```php
     'auth' => [
@@ -22,3 +31,8 @@ Requires an update to the application `auth` config key in `config\auth.php`.
         ],
     ],
 ```
+
+## License
+
+Laravel Auth API is open-sourced software copyright by [Robert Pratt](mailto:bpong@v8ch.com) and licensed under the [GPLv3 license](https://opensource.org/licenses/GPL-3.0).
+
