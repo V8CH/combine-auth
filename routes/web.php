@@ -7,13 +7,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('web')
-    ->namespace('V8CH\Combine\Auth\Http\Controllers')
+    ->namespace('V8CH\LaravelAuthApi\Http\Controllers')
     ->group(function () {
 
         // Authentication Routes...
 //        // Registration Routes...
-//        $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-//        $this->post('register', 'Auth\RegisterController@register');
 //
 //        // Password Reset Routes...
 //        $this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
@@ -25,22 +23,16 @@ Route::middleware('web')
         // Auth routes
         // --------------------------------
 
-        Route::get('forgot', function () {
-            return view('combine::laravel-auth-spa');
-        });
-
-        Route::post('logout', 'LoginController@logout');
-        Route::post('login', 'LoginController@login');
-
-        // --------------------------------
-        // Default Granary routes
-        // --------------------------------
-
         Route::get('login', function () {
             return view('combine::laravel-auth-spa');
         });
+        Route::post('login', 'LoginController@login');
 
-        Route::get('signup', function () {
+        Route::post('logout', 'LoginController@logout');
+
+        Route::get('register', function () {
             return view('combine::laravel-auth-spa');
         });
+        Route::post('register', 'RegisterController@register');
+
     });
