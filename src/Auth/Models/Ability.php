@@ -3,7 +3,7 @@
  * @author Robert Pratt <bpong@v8ch.com>
  * @copyright Robert Pratt 2017
  */
-namespace V8CH\Combine\Auth\Models;
+namespace V8CH\LaravelAuthApi\Models;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;

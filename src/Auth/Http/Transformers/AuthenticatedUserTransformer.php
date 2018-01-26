@@ -4,7 +4,7 @@
  * @copyright Robert Pratt 2017
  */
 
-namespace V8CH\Combine\Auth\Http\Transformers;
+namespace V8CH\LaravelAuthApi\Http\Transformers;
 
 use V8CH\Combine\Core\Models\User;
 use League\Fractal\TransformerAbstract;

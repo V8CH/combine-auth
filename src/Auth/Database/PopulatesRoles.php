@@ -4,10 +4,10 @@
  * @copyright Robert Pratt 2018
  */
 
-namespace V8CH\Combine\Auth\Database;
+namespace V8CH\LaravelAuthApi\Database;
 
 use Illuminate\Support\Collection;
-use V8CH\Combine\Auth\Models\Role;
+use V8CH\LaravelAuthApi\Models\Role;
 
 trait PopulatesRoles
 {
