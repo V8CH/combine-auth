@@ -1,6 +1,6 @@
 <?php
 
-namespace V8CH\Combine\Auth\Http\Controllers;
+namespace V8CH\LaravelAuthApi\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
