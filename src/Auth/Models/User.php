@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use V8CH\Combine\Core\Models\Traits\HasMemberContext;
+use V8CH\Combine\Core\Models\Traits\HasTeams;
+use V8CH\Combine\Core\Models\Traits\HasMembers;
+use V8CH\Combine\Shared\Models\Traits\HasAddresses;
+use V8CH\Combine\Shared\Models\Traits\HasPhones;
 use V8CH\EloquentModelTraits\CreatesUuids;
 
 class User extends Authenticatable
