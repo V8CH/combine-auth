@@ -1,6 +1,7 @@
 <?php
 /**
- * @author Robert Pratt <bpong@v8ch.com>
+ *
+ * @author    Robert Pratt <bpong@v8ch.com>
  * @copyright Robert Pratt 2018
  */
 
@@ -51,21 +52,23 @@ class RegisterController extends Controller
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
     {
 
-        $request->request->add([
+        $request->request->add(
+            [
             'password_confirmation' => $request->has('passwordConfirmation') ? $request->passwordConfirmation : '']
         );
-        /** @noinspection PhpUndefinedMethodInspection */
-        $request->validate([
+        $request->validate(
+            [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-        ]);
+            ]
+        );
 
         event(new Registered($user = $this->create($request->all())));
 
@@ -78,15 +81,17 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \App\User
      */
     protected function create(array $data)
     {
-        return User::create([
+        return User::create(
+            [
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-        ]);
+            ]
+        );
     }
 }
