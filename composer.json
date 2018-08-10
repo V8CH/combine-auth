@@ -15,11 +15,10 @@
   "license": "GPL-3.0-or-later",
   "name": "v8ch/laravel-auth-api",
   "require": {
-    "illuminate/support": "^5.5",
-    "laravel/passport": "^4.0",
     "php": "^7.0",
-    "spatie/laravel-fractal": "^5.3",
     "v8ch/eloquent-model-traits": "^0.1.0"
   },
-  "version": "0.0.1"
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.3"
+  }
 }

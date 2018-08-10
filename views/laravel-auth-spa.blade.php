@@ -25,7 +25,7 @@
 
     <!-- Site style -->
     <!--suppress HtmlUnknownTarget -->
-    <link href="{{ asset('css/laravel-auth-spa.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/laravel-auth-spa-style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -91,9 +91,8 @@
 <!-- Granary Application Scripts -->
 <!--suppress JSUnresolvedLibraryURL -->
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-<script src="{{ asset('js/laravel-auth-spa-manifest.js') }}"></script>
-<script src="{{ asset('js/laravel-auth-spa-vendor.js') }}"></script>
-<script src="{{ asset('js/laravel-auth-spa.js') }}"></script>
+<script src="{{ asset('js/laravel-auth-spa-app.js') }}"></script>
+<script src="{{ asset('js/laravel-auth-spa-style.js') }}"></script>
 
 </body>
 
