@@ -17,7 +17,7 @@
   "require": {
     "php": "^7.0",
     "v8ch/eloquent-model-traits": "^0.1.0",
-    "laravel/passport": "^6.0"
+    "laravel/passport": "^5.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.3"
